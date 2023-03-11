@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
 
 :root {
     --main-font: "Roboto", sans-serif;
+    --home-header-font: "Fugaz One";
     --black: rgb(0, 0, 0);
     --white: rgb(255, 255, 255);
     --grey: #696687;
@@ -18,7 +20,6 @@
 html, body {
     height: 100%;
     position: relative;
-    overflow-y: hidden;
 }
 
 /* Navbar */
@@ -113,11 +114,10 @@ html, body {
     background-color: var(--grey);
 }
 
-/* Home Section */
+/* Home Page*/
 
 .home-page {
     min-height: 100vh;
-    border: 1px solid green; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -125,18 +125,119 @@ html, body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-attachment: fixed;  
+    background-attachment: fixed; 
+    /* opacity: 0.8; */
+    /* filter: blur(1px); */
 }
 
 .home-container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     height: 100%;
     width: 100%;
-    border: 1px solid red;
+    max-width: 800px;
+    padding-top: 4em;
+    padding-bottom: 1em;
+}
+
+.home-text-container {
+    padding-left: 0.8em;
+}
+
+.home-header {
+    color: var(--white);
+    font-family: var(--home-header-font);
+    font-size: 2.8rem;
+    line-height: 1.4em;
+    letter-spacing: 1px;
+    margin-bottom: 0.2em;
+}
+
+.home-p {
+    color: var(--white);
+    font-family: var(--main-font);
+    font-size: 1rem;
+    line-height: 1.8em;
+    letter-spacing: 0.5px;
+    margin-bottom: 1.4em;
+}
+
+.home-links-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 400px;
+    height: 50px;
+}
+
+.home-menu-btn {
+    width: 45%;
+    padding: 1em 0;
+    text-align: center;
+    font-family: var(--main-font);
+    font-weight: bold;
+    background-color: var(--gold);
+    border-radius: 5px;
+}
+
+.home-contact-btn {
+    width: 45%;
+    padding: 1em 0;
+    text-align: center;
+    font-family: var(--main-font);
+    font-weight: bold;
+    color: var(--white);
+    /* background-color: var(--gold); */
+    border: 2px solid var(--gold);
+    border-radius: 5px;
+}
+
+.home-menu-btn:hover, .home-contact-btn:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+/* About Page */
+
+.about-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-div {
+    height: 500px;
 }
 
 /* Media Queries */
+
+@media screen and (min-width: 500px) {
+    /* Home Page */
+    .home-text-container {
+        padding-left: 2em;
+    }
+
+    .home-header {
+        margin-bottom: 0.4em;
+        font-size: 3rem;
+    }
+
+    .home-p {
+        margin-bottom: 1.6em;
+        font-size: 1.2rem;
+    }
+
+    .home-links-container {
+        padding-left: 1.2em;
+    }
+
+    .home-contact-btn, .home-menu-btn {
+        padding-top: 0.7em;
+        font-size: 1.2rem;
+    }
+}
 
 @media screen and (min-width: 768px) {
     /* Navbar */
@@ -166,11 +267,25 @@ html, body {
     .hamburger {
         display: none;
     }
+
+    /* Home Page */
+    .home-header {
+        font-size: 3.8rem;
+    }
+
+    .home-p {
+        font-size: 1.2rem;
+    }
 }
 
 @media screen and (min-width: 1024px) {
     /* Navbar */
     .nav-links-container {
         font-size: 1.2rem;
+    }
+
+    /* Home Page */
+    .home-header {
+        font-size: 4.8rem;
     }
 }
