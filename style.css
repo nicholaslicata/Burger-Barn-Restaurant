@@ -273,6 +273,37 @@ html {
     width: 100%;
 }
 
+/* Menu Page */
+
+.menu-page {
+    min-height: 100vh;
+    background-color: var(--navy);
+}
+
+.menu-container {
+    min-height: 100vh;
+    border: 1px solid blue;
+}
+
+.menu-button-container {
+    margin-top: 5em;
+    text-align: center;
+    border: 1px solid green;
+}
+
+.menu-items-container{
+    min-height: 800px;
+    border: 1px solid yellow;
+}
+
+.item-container {
+    border: 1px solid red;
+}
+
+.item-name-container {
+    display: flex;
+}
+
 /* Media Queries */
 
 @media screen and (min-width: 500px) {
