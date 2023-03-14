@@ -127,11 +127,22 @@ function renderMenuItems(menuItems) {
 }
 
 menuButtons.forEach(button => button.addEventListener('click', function(e) {
-
+    const menuCategories = menu.filter(menuItems => {
+        if (e.target.textContent === menuItems.category) {
+            return menuItems;
+        }
+    })
+    menuItemsContainer.textContent = '';
+    menuCategories.forEach(menuItem => renderMenuItems(menuItem));
 }))
 
 window.addEventListener('DOMContentLoaded', function() {
-    menu.map(menuItem => renderMenuItems(menuItem));
+    const burgerMenu = menu.filter(burgerItems => {
+        if (burgerItems.category === 'Burgers') {
+            return burgerItems;
+        }
+    })
+    burgerMenu.forEach(burgerItem => renderMenuItems(burgerItem));
 })
 
 
