@@ -287,6 +287,7 @@ html {
 
 .menu-container {
     width: 90%;
+    max-width: 1000px;
     padding: 6em 0;
     margin: 0 auto;
 }
@@ -295,9 +296,10 @@ html {
     display: flex;
     justify-content: space-around;
     width: 100%;
+    max-width: 650px;
     text-align: center;
-    margin-bottom: 3em;
-    border: 1px solid green;
+    margin: 0 auto;
+    margin-bottom: 5em;
 }
 
 .menu-button {
@@ -320,26 +322,41 @@ html {
 .menu-items-container{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    min-height: 800px;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 500px;
+    margin: 0 auto;
     font-family: var(--main-font);
-    border: 1px solid yellow;
 }
 
 .item-container {
-    color: white;
-    border: 1px solid red;
+    color: var(--white);
 }
 
 .item-name-container {
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    border-bottom: 1px dotted var(--gold);
+    justify-content: space-between;
+    padding-bottom: 0.5em;
+    border-bottom: 2px dotted var(--gold);
 }
 
 .item-name {
     font-size: 1.4rem;
+}
+
+.item-price {
+    font-size: 1rem;
+}
+
+.item-desc-container {
+    padding-top: 0.5em;
+}
+
+/* Contact Page */
+
+.contact-page {
+    min-height: 100vh;
 }
 
 /* Media Queries */
@@ -445,6 +462,23 @@ html {
     .about-p {
         font-size: 1.2rem;
     }
+
+    /* Menu Page */
+    .menu-button {
+        font-size: 1rem;
+    }
+
+    .item-name {
+        font-size: 1.8rem;
+    }
+
+    .item-price {
+        font-size: 1.6rem;
+    }
+
+    .item-desc {
+        font-size: 1.2rem;
+    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -456,5 +490,14 @@ html {
     /* Home Page */
     .home-header {
         font-size: 4.2rem;
+    }
+
+    /* Menu Page */
+    .item-name {
+        font-size: 2rem;
+    }
+
+    .item-price {
+        font-size: 1.8rem;
     }
 }
