@@ -29,25 +29,25 @@ const menu = [
     {
         category: 'Burgers',
         title: 'All American Burger',
-        description: ['American Cheese', 'Lettuce', 'Tomato', 'Pickles'],
+        description: `American Cheese, Lettuce, Tomato, Pickles`,
         price: '$12.99'
     },
     {
         category: 'Burgers',
         title: 'BBQ Bacon Cheddar Burger',
-        description: ['Cheddar Cheese,', 'Applewood Bacon', 'Crispy Onions', 'BBQ Sauce'],
+        description: `Cheddar Cheese, Applewood Bacon, Crispy Onions, BBQ Sauce`,
         price: '$14.99'
     },
     {
         category: 'Burgers',
         title: 'Mushroom Swiss Burger',
-        description: ['Swiss Cheese', 'Sauteed Mushrooms', 'Truffle Aioli'],
+        description: `Swiss Cheese, Sauteed Mushrooms, Truffle Aioli`,
         price: '$14.99'
     },
     {
         category: 'Burgers',
         title: 'Breakfast Burger',
-        description: ['Cheddar Cheese', 'Fried Egg', 'Hashbrowns', 'Applewood Bacon'],
+        description: `Cheddar Cheese, Fried Egg, Hashbrowns, Applewood Bacon`,
         price: '$16.99'
     },
     {
