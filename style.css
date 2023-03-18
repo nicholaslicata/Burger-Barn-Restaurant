@@ -7,8 +7,8 @@
     --black: rgb(0, 0, 0);
     --white: rgb(255, 255, 255);
     --grey: #696687;
+    --dark-grey: #212529;
     --gold: #c9ab04;
-    /* --navy: #272343; */
     --navy: #403585;
 }
 
@@ -360,35 +360,39 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    position: relative;
 }
 
 .contact-container {
-    min-height: 250px;
+    min-height: 80vh;
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 30px;
     text-align: center;
-    border: solid red 1px;
 }
 
 .contact-header { 
     font-family: var(--main-font);
+    font-size: 1.4rem;
     color: var(--navy);
 }
 
 .contact-p {
     font-family: var(--main-font);
+    font-size: 1.2rem;
     color: var(--grey);
 }
 
 .contact-number {
+    font-family: var(--main-font);
+    font-size: 1.2rem;
     color: var(--gold);
 }
 
 .contact-page-btn {
     width: 30%;
+    max-width: 150px;
     margin: 0 auto;
     padding: 0.5em;
     border-radius: 5px;
@@ -405,11 +409,51 @@ html {
 }
 
 .contact-footer {
-    position: absolute;
-    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: auto;
+    padding: 0.5em 1.5em;
     width: 100%;
-    height: 2.5rem;
-    border: 1px solid green;
+    font-family: var(--main-font);
+    background-color: var(--dark-grey);
+}
+
+.social-links-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.social-links{
+    display: flex;
+}
+
+.social-link {
+    height: 24px;
+    width: 24px
+}
+
+.social-links-top {
+    font-size: 1rem;
+    color: var(--white);
+    margin-bottom: 0.4em;
+}
+
+.contact-address-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-address {
+    font-size: 0.8rem;
+    color: var(--grey);
+    margin-bottom: 0.4em;
+}
+
+.contact-address-top {
+    font-size: 1rem;
+    color: var(--white);
+    margin-bottom: 0.4em;
 }
 
 /* Media Queries */
@@ -532,6 +576,40 @@ html {
     .item-desc {
         font-size: 1.2rem;
     }
+
+    /* Contact Page */
+    .contact-header {
+        font-size: 1.8rem;
+    }
+
+    .contact-p {
+        font-size: 1.6rem;
+    }
+
+    .contact-page-btn {
+        font-size: 1.2rem;
+    }
+
+    .contact-footer {
+        flex-direction: row;
+    }
+
+    .social-links-top {
+        font-size: 1.2rem;
+    }
+
+    .social-link {
+        height: 30px;
+        width: 30px;
+    }
+
+    .contact-address-top {
+        font-size: 1.2rem;
+    }
+
+    .contact-address {
+        font-size: 1rem;
+    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -552,5 +630,23 @@ html {
 
     .item-price {
         font-size: 1.8rem;
+    }
+
+    /* Contact Page */
+    .contact-header {
+        font-size: 2.4rem;
+    }
+
+    .contact-p {
+        font-size: 2rem;
+    }
+
+    .contact-page-btn {
+        font-size: 1.4rem;
+    }
+
+    .social-link {
+        height: 40px;
+        width: 40px;
     }
 }
