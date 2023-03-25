@@ -5,16 +5,19 @@ const navLinksContainer = document.querySelector('.nav-links-container');
 const navLinks = document.querySelectorAll('.nav-link');
 
 hamburgerBtn.addEventListener('click', function() {
+    // Add/remove active class for mobile nav when clicked
     navLinksContainer.classList.toggle('nav-links-container-active');
 })
 
 navLinks.forEach(link => link.addEventListener('click', function() {
+    // Close mobile nav after clicking a link
     if (navLinksContainer.classList.contains('nav-links-container-active')) {
         navLinksContainer.classList.remove('nav-links-container-active');
     } 
 }))
 
 window.addEventListener('resize', function() {
+    // Close mobile nav if screen size increase beyond 768px
     if (window.innerWidth > 768) {
         navLinksContainer.classList.remove('nav-links-container-active');
     }
@@ -127,21 +130,25 @@ function renderMenuItems(menuItems) {
 }
 
 menuButtons.forEach(button => button.addEventListener('click', function(e) {
+    // Filter menu items to match category of each menu button
     const menuCategories = menu.filter(menuItems => {
         if (e.target.textContent === menuItems.category) {
             return menuItems;
         }
     })
     menuItemsContainer.textContent = '';
+    // Render only the menu items that match category of each menu button
     menuCategories.forEach(menuItem => renderMenuItems(menuItem));
 }))
 
 window.addEventListener('DOMContentLoaded', function() {
+    // Filter for only burger items
     const burgerMenu = menu.filter(burgerItems => {
         if (burgerItems.category === 'Burgers') {
             return burgerItems;
         }
     })
+    // Render only burger items on page load
     burgerMenu.forEach(burgerItem => renderMenuItems(burgerItem));
 })
 
