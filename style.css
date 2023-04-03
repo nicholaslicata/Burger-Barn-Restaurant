@@ -602,6 +602,10 @@ html {
         font-size: 1.6rem;
     }
 
+    .contact-number {
+        font-size: 1.4rem;
+    }
+
     .contact-page-btn {
         font-size: 1.2rem;
     }
@@ -655,6 +659,10 @@ html {
 
     .contact-p {
         font-size: 2rem;
+    }
+
+    .contact-number {
+        font-size: 1.8rem;
     }
 
     .contact-page-btn {
